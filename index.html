@@ -51,21 +51,10 @@
 <div id="contents">
 	<style type="text/css">
 		@import url('https://themes.googleusercontent.com/fonts/css?kit=VdzaRt4WQn_rvT97iDToL43qJkZ0mILFEVSiyyQMWHIibyMe4ukfvPvpfYEqkIMW');
-		ol.lst-kix_tgmutpd37h0c-0.start {
-			counter-reset: lst-ctn-kix_tgmutpd37h0c-0 0
-		}
-		ol.lst-kix_tgmutpd37h0c-0>li {
-			counter-increment: lst-ctn-kix_tgmutpd37h0c-0
-		}
-		ol.lst-kix_tgmutpd37h0c-0>li:before {
-			content: "" counter(lst-ctn-kix_tgmutpd37h0c-0,decimal) ". "
-		}
-		ol.lst-kix_tgmutpd37h0c-0 {
-			list-style-type: none
-		}
 		ol {
-			margin: 0;
-			padding: 0
+			margin-left: 3.1em;
+			margin-right: 2em;
+			font-size: 10pt;
 		}
 		.c0 {
 			font-size: 10pt;
@@ -97,11 +86,6 @@
 			font-family: "Montserrat";
 			color: #3d85c6;
 			font-weight: bold
-		}
-		.c6 {
-			margin-left: 2em;
-			margin-right: 2em;
-			padding-left: 0pt
 		}
 		.c9 {
 			margin-left: 36pt;
@@ -138,11 +122,6 @@
 		}
 		.c21 {
 			height: 11pt
-		}
-		li {
-			color: #000000;
-			font-size: 11pt;
-			font-family: "Arial"
 		}
 		p {
 			margin: 0;
@@ -188,11 +167,11 @@
 
 	<h3 class="c2"><span class="c17">CHAOSの実践</span></h3>
 	<p class="c2"><span class="c3">To specifically address the uncertainty of distributed systems at scale, Chaos Engineering can be thought of as the facilitation of experiments to uncover systemic weaknesses. These experiments follow four steps:</span></p>
-	<ol class="c20 lst-kix_tgmutpd37h0c-0 start" start="1">
-		<li class="c2 c6"><span class="c3">Start by defining ‘steady state’ as some measurable output of a system that indicates normal behavior.</span></li>
-		<li class="c2 c6"><span class="c3">Hypothesize that this steady state will continue in both the control group and the experimental group.</span></li>
-		<li class="c2 c6"><span class="c3">Introduce variables that reflect real world events like servers that crash, hard drives that malfunction, network connections that are severed, etc.</span></li>
-		<li class="c2 c6"><span class="c3">Try to disprove the hypothesis by looking for a difference in steady state between the control group and the experimental group.</span></li>
+	<ol>
+		<li class="c2"><span class="c3">Start by defining ‘steady state’ as some measurable output of a system that indicates normal behavior.</span></li>
+		<li class="c2"><span class="c3">Hypothesize that this steady state will continue in both the control group and the experimental group.</span></li>
+		<li class="c2"><span class="c3">Introduce variables that reflect real world events like servers that crash, hard drives that malfunction, network connections that are severed, etc.</span></li>
+		<li class="c2"><span class="c3">Try to disprove the hypothesis by looking for a difference in steady state between the control group and the experimental group.</span></li>
 	</ol>
 	<p class="c2"><span class="c3">The harder it is to disrupt the steady state, the more confidence we have in the behavior of the system. If a weakness is uncovered, we now have a target for improvement before that behavior manifests in the system at large.</span></p>
 	<p class="c1"><span class="c0"></span></p>
