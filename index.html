@@ -10,40 +10,9 @@
 				margin: 0;
 			}
 
-			iframe {
-				border: 0;
-				frameborder: 0;
-				height: 100%;
-				width: 100%;
-			}
-
-			#header, #footer {
-				background: #f0f0f0;
-				padding: 10px 10px;
-			}
-
-			#header {
-				border-bottom: 1px #ccc solid;
-			}
-
-			#footer {
-				border-top: 1px #ccc solid;
-				border-bottom: 1px #ccc solid;
-				font-size: 13;
-			}
-
 			#contents {
 				margin: 4em auto;
 				width: 40em;
-			}
-
-			.dash {
-				padding: 0 6px;
-			}
-
-			h4 {
-				font-size: 14pt;
-				color: #6fa8dc;
 			}
 		</style>
 	</head>
@@ -52,8 +21,6 @@
 	<style type="text/css">
 		@import url('https://themes.googleusercontent.com/fonts/css?kit=VdzaRt4WQn_rvT97iDToL43qJkZ0mILFEVSiyyQMWHIibyMe4ukfvPvpfYEqkIMW');
 		ol {
-			margin-left: 3.1em;
-			margin-right: 2em;
 			font-size: 10pt;
 		}
 		.c0 {
@@ -62,7 +29,6 @@
 			color: #434343
 		}
 		.c1 {
-			text-align: justify;
 			height: 11pt
 		}
 		.c2 {
@@ -95,8 +61,6 @@
 			background-color: #ffffff;
 			color: #222222
 		}
-		.c12 {
-		}
 		.c15 {
 			margin-bottom: 0.7em;
 			margin-left: 27pt;
@@ -116,37 +80,22 @@
 		.c18 {
 			text-align: center;
 		}
-		.c20 {
-			padding: 0;
-			margin: 0
-		}
-		.c21 {
-			height: 11pt
-		}
 		p {
 			margin: 0;
 			color: #000000;
 			font-size: 11pt;
-			font-family: "Arial"
 		}
 		h3 {
 			padding-top: 8pt;
-			color: #666666;
-			font-weight: bold;
 			font-size: 12pt;
 			padding-bottom: 0pt;
-			font-family: "Trebuchet MS";
-			line-height: 1.15;
-			text-align: left
 		}
 		h4 {
-			padding-top: 8pt;
-			color: #666666;
-			font-size: 11pt;
 			padding-bottom: 0pt;
 			font-family: "Trebuchet MS";
 			line-height: 1.15;
-			text-align: left
+			font-size: 14pt;
+			color: #6fa8dc;
 		}
 	</style>
 
@@ -157,13 +106,13 @@
 
 	<p class="c1"></p>
 	<p class="c2"><span class="c0">大規模かつ分散したソフトウェアシステムの進歩によって、ソフトウェアエンジニアリングの流れは大きく変わりつつある。業界では開発の柔軟性とや速度を向上させる手法に素早く採用している。しかし、これらの利点の裏には切迫した問題がある: 本番環境に投入した複雑なシステムにどの程度の自信を持つことができるだろうか。</span></p>
-	<p class="c1"><span class="c0"></span></p>
+	<p class="c1"></p>
 	<p class="c2"><span class="c3 c10">例え分散システムの独立したサービスのすべてが正常に機能している場合でも、それらのサービス間の相互作用は予測不能な結果を招く場合がある。稀であっても、本番環境に影響を与える、破壊的な実世界の事象によって拗れた予測不能な結果は、これらの分散システムを本質的にカオスなものとする。</span></p>
-	<p class="c1"><span class="c3 c10"></span></p>
+	<p class="c1"></p>
 	<p class="c2"><span class="c3 c10">	システム全体に異常な挙動を示す前に、弱点を特定する必要がある。</span><span class="c0">全体的な弱点は次のいずれかの形をとるだろう: サービスが利用不能な場合の不適切なフォールバックの設定; 調整が不適切なタイムアウトによる再試行の嵐; 下流の依存関係が過剰なトラフィックを受信した場合の停止; 単一障害点がクラッシュした場合のカスケードの失敗; など。本番環境で顧客に影響を与える前に、最も深刻な弱点を積極的に解決しなければならない。これらのシステムに固有のカオスを管理し、柔軟性と速度の向上を利用し、それらの示す複雑性に関わらず本番デプロイに自信を持つ方法が必要である。</span></p>
-	<p class="c1"><span class="c0"></span></p>
+	<p class="c1"></p>
 	<p class="c2"><span class="c0">経験的かつシステムを用いたアプローチは大規模な分散システムのカオスを解決し、それらのシステムの現実的な条件に耐える能力に対しての信頼を築く。分散システムの挙動は、対照実験でそれを観察することによって知ることができる。これを<i>Chaos Engineering</i>と呼ぶ。</span></p>
-	<p class="c1"><span class="c3"></span></p>
+	<p class="c1"></p>
 
 	<h3 class="c2"><span class="c17">CHAOSの実践</span></h3>
 	<p class="c2"><span class="c3">To specifically address the uncertainty of distributed systems at scale, Chaos Engineering can be thought of as the facilitation of experiments to uncover systemic weaknesses. These experiments follow four steps:</span></p>
@@ -174,7 +123,7 @@
 		<li class="c2"><span class="c3">Try to disprove the hypothesis by looking for a difference in steady state between the control group and the experimental group.</span></li>
 	</ol>
 	<p class="c2"><span class="c3">The harder it is to disrupt the steady state, the more confidence we have in the behavior of the system. If a weakness is uncovered, we now have a target for improvement before that behavior manifests in the system at large.</span></p>
-	<p class="c1"><span class="c0"></span></p>
+	<p class="c1"></p>
 
 	<h3 class="c2"><span class="c17">発展的な原則</span></h3>
 	<p class="c2"><span class="c0">The following principles describe an ideal application of Chaos Engineering, applied to the processes of experimentation described above. The degree to which these principles are pursued strongly correlates to the confidence we can have in a distributed system at scale.</span></p>
@@ -193,18 +142,10 @@
 
 	<h4 class="c2 c15">爆発範囲を最小化する</h4>
 	<p class="c2 c9"><span class="c0">Experimenting in production has the potential to cause unnecessary customer pain. While there must be an allowance for some short-term negative impact, it is the responsibility and obligation of the Chaos Engineer to ensure the fallout from experiments are minimized and contained.</span></p>
-	<p class="c1"><span class="c0"></span></p>
+	<p class="c1"></p>
 	<p class="c2"><span class="c0">Chaos Engineering is a powerful practice that is already changing how software is designed and engineered at some of the largest-scale operations in the world. Where other practices address velocity and flexibility, Chaos specifically tackles systemic uncertainty in these distributed systems. The Principles of Chaos provide confidence to innovate quickly at massive scales and give customers the high quality experiences they deserve.</span></p>
-	<p class="c21"><span></span></p>
+	<p class="c1"></p>
 	<p class="c2"><span class="c0">Join the ongoing discussion of the Principles of Chaos and their application in the <a href="https://groups.google.com/forum/#!forum/chaos-community">Chaos Community</a> Google Group.</span></p>
-	<p class="c1"><span class="c0"></span></p>
-	<p class="c2">
-		<span class='st_facebook_hcount' displayText='Facebook'></span>
-		<span class='st_twitter_hcount' displayText='Tweet'></span>
-		<span class='st_linkedin_hcount' displayText='LinkedIn'></span>
-		<span class='st_pinterest_hcount' displayText='Pinterest'></span>
-		<span class='st_email_hcount' displayText='Email'></span>
-	</p>
 </div>
 </body>
 </html>
