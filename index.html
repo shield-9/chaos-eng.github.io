@@ -110,16 +110,16 @@
 	<p class="c1"></p>
 
 	<h3 class="c2"><span class="c17">発展的な原則</span></h3>
-	<p class="c2"><span class="c0">The following principles describe an ideal application of Chaos Engineering, applied to the processes of experimentation described above. The degree to which these principles are pursued strongly correlates to the confidence we can have in a distributed system at scale.</span></p>
+	<p class="c2"><span class="c0">以下の原則は、前述の実験過程に適用されるChaos Engineeringの理想的な応用を記述したものである。これらの原則のうちどれがどの程度追及されるのかは、大規模な分散システムにどの程度自信を持っているのかと強く相関する。</span></p>
 
 	<h4>定常状態の挙動について仮説を立てる</h4>
-	<p class="c2 c9"><span class="c0">Focus on the measurable output&nbsp;of a system, rather than internal attributes of the system. Measurements of that output over a short period of time constitute a proxy for the system’s steady state. The overall system’s throughput, error rates, latency percentiles, etc. could all be metrics of interest representing steady state behavior. By focusing on systemic behavior patterns during experiments, Chaos verifies that the system <i>does</i>&nbsp;work, rather than trying to validate <i>how</i>&nbsp;it works.</span></p>
+	<p class="c2 c9"><span class="c0">システムの内部属性よりも、システムの計測可能な出力に注目する。短期間の出力の計測値はシステムの定常状態についての評価尺度を形成する。システム全体のスループットやエラー率、遅延の分布などはすべて定常状態の挙動を示す興味深い指標となりうる。実験中に全体的な挙動に注目することで、Chaosはシステムが<i>どのように</i>動くのかを確認しようとするのではなく、動作する<i>こと</i>を検証する。</span></p>
 
 	<h4>実世界の事象は多様である</h4>
-	<p class="c2 c9"><span class="c0">Chaos variables reflect real-world events. Prioritize events either by potential impact or estimated frequency. Consider events that correspond to hardware failures like servers dying, software failures like malformed responses, and non-failure events like a spike in traffic or a scaling event. Any event capable of disrupting steady state is a potential variable in a Chaos experiment.</span></p>
+	<p class="c2 c9"><span class="c0">Chaosの変数は実世界の事象を反映している。潜在的な影響力もしくは想定される頻度によって事象に優先順位をつける。サーバの死のようなハードウェアの障害や不正な応答のようなソフトウェアの障害と関連する事象や、トラフィックやスケールの発生のスパイクのような障害ではない事象を考える。定常状態を乱す恐れのあるあらゆる事象はChaosの実験では潜在的な変数である。</span></p>
 
 	<h4>本番環境で実験を行う</h4>
-	<p class="c2 c9"><span class="c0">Systems behave differently depending on environment and traffic patterns. Since the behavior of utilization can change at any time, sampling real traffic is the only way to reliably capture the request path. To guarantee both authenticity of the way in which the system is exercised and relevance to the current deployed system, Chaos strongly prefers to experiment directly on production traffic.</span></p>
+	<p class="c2 c9"><span class="c0">システムは環境やトラフィックのパターンによって異なる振る舞いをする。Since the behavior of utilization can change at any time, sampling real traffic is the only way to reliably capture the request path. To guarantee both authenticity of the way in which the system is exercised and relevance to the current deployed system, Chaos strongly prefers to experiment directly on production traffic.</span></p>
 
 	<h4>継続的な実行のために実験を自動化する</h4>
 	<p class="c2 c9"><span class="c0">Running experiments manually is labor-intensive and ultimately unsustainable. Automate experiments and run them continuously. Chaos Engineering builds automation into the system to drive both orchestration and analysis.</span></p>
